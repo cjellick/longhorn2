@@ -7,7 +7,7 @@ convoy-volume-agent-longhorn:
     - /proc:/host/proc
     - /var/run:/host/var/run
     - /etc/docker/plugins:/etc/docker/plugins
-  image: cjellick/convoy-agent:longhorn-1
+  image: cjellick/convoy-agent:dev5
   command:
   - volume-agent-longhorn
 
@@ -24,14 +24,14 @@ convoy-volume-driver-longhorn:
     - /dev:/host/dev
     - /var/run:/host/var/run
     - /etc/docker/plugins:/etc/docker/plugins
-  image: cjellick/convoy-agent:longhorn-1
+  image: cjellick/convoy-agent:dev5
   command:
   - volume-driver-longhorn
 
 convoy-longhorn-storagepool:
   labels:
     io.rancher.container.create_agent: 'true'
-  image: cjellick/convoy-agent:longhorn-1
+  image: cjellick/convoy-agent:dev5
   volumes:
     - /var/run:/host/var/run
   command: storagepool-agent

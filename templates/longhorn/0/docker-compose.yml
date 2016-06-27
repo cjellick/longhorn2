@@ -17,8 +17,6 @@ driver:
   command:
     - launch-driver
     - volumedriver
-  environment:
-    RANCHER_CLIENT_DEBUG: true
 
 storagepool:
   labels:

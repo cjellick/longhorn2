@@ -22,7 +22,10 @@ storagepool:
   labels:
     io.rancher.container.create_agent: 'true'
     io.rancher.container.system: Longhorn
+  pid: host
   image: cjellick/longhorn:local1
+  volumes:
+    - /var/lib/rancher/longhorn/backups:/var/lib/rancher/longhorn/backups:shared
   command:
     - launch-driver
     - storagepool
